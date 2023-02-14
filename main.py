@@ -49,7 +49,11 @@ def get_response(user_input):
     return response
 
 while True:
+    # Seting Variables
+    event = None
     response = get_response(input('You: '))
-    event = os.system('C:/PyBot_Data/')
+
+    # Configuring event
+    event = os.system('C:/PyBot_Data/cloudGames.bat') if response == 'Opening Cloud Games' else None
 
     print('Bot: ' + response)
